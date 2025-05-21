@@ -3,6 +3,7 @@ const categoria = prompt(
   "Ingrese una categoría: Herramientas, Maquinarias o Electricidad"
 );
 
+//Función para filtrar artículos por categoría
 function filtrarPorCategoria(categoria) {
   return articulos.filter((articulo) => articulo.categoria === categoria);
 }
@@ -10,6 +11,23 @@ function filtrarPorCategoria(categoria) {
 console.log("Herramientas:", filtrarPorCategoria("Herramientas"));
 console.log("Maquinarias:", filtrarPorCategoria("Maquinarias"));
 console.log("Electricidad:", filtrarPorCategoria("Electricidad"));
+
+
+function filtrarPorStock(articulos) {
+  return articulos.filter((articulo) => articulo.stock > 0);
+}       
+
+console.log("Articulos Disponibles:", filtrarPorStock(articulos))
+
+function filtrarPorPrecio(articulos) {
+  return articulos.filter((articulo) => articulo.precio < 1000);
+}
+console.log("Articulos con precio menor a $1000:", filtrarPorPrecio(articulos))
+
+
+// funcion que filtra por categoria de acuerdo a lo que elige el usuario
+// una vez que elige, se le muestra los articulos disponibles en esa categoria
+// y le da la posibilidad de elegir uno
 
 const articulosFiltrados = filtrarPorCategoria(categoria);
 
@@ -54,6 +72,10 @@ if (articulosFiltrados.length > 0) {
     }
   }
 } else {
-  alert(`No se encontraron artículos para la categoría: ${categoria}`);
+   if (categoria === null) {
+    alert("Selección cancelada.");
+} else {
+    alert(`No se encontraron artículos para la categoría: ${categoria}`);
+}
 }
 
