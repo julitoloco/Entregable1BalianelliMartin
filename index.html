@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferreteria Clemente</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <script type="module" src="main.js"></script>
-</body>
+
+<div class="header">
+  <img src="img/logo.jpg" alt="Clemente" class="logo">
+  <h1>FERRETERÍA CLEMENTE</h1>
+</div>
+
+<div class="descripcion">
+  <p>
+    Este sistema permite a los usuarios seleccionar una categoría de productos y visualizar los artículos disponibles dentro de ella.<br>
+    Luego, pueden elegir un artículo específico y confirmar su selección. A continuación, se detallan sus principales funcionalidades:
+  </p>
+  <ul>
+    <li>Selección de categoría: Se solicita al usuario ingresar una categoría (Herramientas, Maquinarias o Electricidad).</li>
+    <li>Filtrado de artículos: Se muestran los productos que pertenecen a la categoría seleccionada.</li>
+    <li>Interacción con el usuario: Si hay artículos disponibles, se presenta una lista con sus nombres y números asociados.</li>
+    <li>Selección y confirmación: El usuario ingresa el número de un artículo para verlo en detalle. Se muestra su información (precio, marca, descripción) y se solicita confirmación.</li>
+    <li>Validaciones: Se manejan casos en los que la selección es inválida, la categoría no tiene productos o el usuario cancela la operación.</li>
+    <li>Filtrado adicional: Se incluyen funciones para listar artículos con stock disponible y aquellos con precio inferior a $1000. Este sistema garantiza una experiencia fluida en la selección y visualización de productos, incorporando validaciones para mejorar la usabilidad.</li>
+  </ul>
+</div>
+    </div>
+
+  </body>
 </html>
